@@ -24,9 +24,11 @@
 
 
       {{ if $.Site.Params.ShowReadingTime }}
+	 {{ if .Params.ShowReadingTime | default true }}
         <span class="post-read-time"
           >— {{ .ReadingTime }} {{ $.Site.Params.MinuteReadingTime | default "min read" }}</span
         >
+	{{ end }}
       {{ end }}
     </div>
 
